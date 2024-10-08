@@ -1,0 +1,32 @@
+# Start web server
+networks:
+  backend:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
+services:
+  web-1:
+    networks:
+      backend:
+        ipv4_address: 10.5.0.2
+    build: ./src/webserver
+    ports:
+      - "19000:8000"
+    environment:
+      - DB_NAME=shorten.db
+      - REDIS_HOST=10.5.0.3
+      - REDIS_PORT=6379
+      - FRONTEND_PORT=19000
+    volumes:
+      - ./data:/data
+  redis:
+    networks:
+      backend:
+        ipv4_address: 10.5.0.3
+    image: "redis:alpine"
+    ports:
+      - "19001:6379"
+    volumes:
+      - ./data:/data
