@@ -4,10 +4,13 @@ A simple URL shortener that uses a local database to store the shortened URLs.
 
 ## Architecture
 
+### Overview
+![architecture](./README/architecture.svg)
+
+### Components
 - **API**: FastAPI
 - **Database**: SQLite
 - **Cache**: Redis
-- **Load Balancer**: Nginx
 
 all deployed using Docker
 

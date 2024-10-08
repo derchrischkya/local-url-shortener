@@ -1,0 +1,91 @@
+<mxfile host="Electron" modified="2024-10-08T22:56:48.614Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.6 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="6XQEco9_weJKltO-xq3u" version="24.4.6" type="device">
+  <diagram name="Page-1" id="AXuqZ8MUQW6K6phYCS8I">
+    <mxGraphModel dx="954" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-T92hLNZ-4J5N98UV4zf-1" target="-T92hLNZ-4J5N98UV4zf-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-25" value="&lt;div&gt;curl --request POST \&lt;/div&gt;&lt;div&gt;&amp;nbsp; --url http://127.0.0.1:19000/api/shorten \&lt;/div&gt;&lt;div&gt;&amp;nbsp; --header &#39;content-type: application/json&#39; \&lt;/div&gt;&lt;div&gt;&amp;nbsp; --data &#39;{&quot;url&quot;: &quot;https://www.amazon.com&quot;}&#39;&amp;nbsp;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-T92hLNZ-4J5N98UV4zf-24">
+          <mxGeometry x="0.03" y="3" relative="1" as="geometry">
+            <mxPoint x="-9" y="-82" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="235" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-T92hLNZ-4J5N98UV4zf-2" target="-T92hLNZ-4J5N98UV4zf-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="250" />
+              <mxPoint x="555" y="161" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-T92hLNZ-4J5N98UV4zf-2" target="-T92hLNZ-4J5N98UV4zf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="250" />
+              <mxPoint x="555" y="319" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-23" value="if not exist hash" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-T92hLNZ-4J5N98UV4zf-22">
+          <mxGeometry x="-0.4895" y="4" relative="1" as="geometry">
+            <mxPoint x="19" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-2" value="Webserver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-3" value="Redis" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.cache_node;" vertex="1" parent="1">
+          <mxGeometry x="640" y="122" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-4" value="SQLite" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rds_sql_server_instance;" vertex="1" parent="1">
+          <mxGeometry x="640" y="280" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-10" value="shorten.db" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" vertex="1" parent="1">
+          <mxGeometry x="559.0000000000005" y="400" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-11" value="hash" style="swimlane;startSize=20;html=1;" vertex="1" parent="-T92hLNZ-4J5N98UV4zf-10">
+          <mxGeometry y="20" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-12" value="url" style="swimlane;startSize=20;html=1;" vertex="1" parent="-T92hLNZ-4J5N98UV4zf-10">
+          <mxGeometry x="120" y="20" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-15" value="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550.0000000000005" y="40" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-16" value="key" style="swimlane;startSize=20;html=1;" vertex="1" parent="-T92hLNZ-4J5N98UV4zf-15">
+          <mxGeometry y="20" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-20" value="999521047" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="-T92hLNZ-4J5N98UV4zf-16">
+          <mxGeometry x="19.999999999999545" y="20" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-17" value="value" style="swimlane;startSize=20;html=1;" vertex="1" parent="-T92hLNZ-4J5N98UV4zf-15">
+          <mxGeometry x="120" y="20" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-21" value="amazon.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="-T92hLNZ-4J5N98UV4zf-17">
+          <mxGeometry x="14.999999999999545" y="20" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-18" value="999521047" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="590" y="438" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-19" value="amazon.com" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="685" y="438" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-T92hLNZ-4J5N98UV4zf-26" value="{&#xa;  &quot;shortened_url&quot;: &quot;http://127.0.0.1:19000/999521047&quot;&#xa;}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="0.1538" y="80" relative="1" as="geometry">
+            <mxPoint x="339" y="290" as="sourcePoint" />
+            <mxPoint x="104" y="265" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="104" y="290" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
