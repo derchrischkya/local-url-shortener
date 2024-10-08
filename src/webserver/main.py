@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Body
 from fastapi.responses import RedirectResponse
 import zlib
 from pydantic import BaseModel, HttpUrl
@@ -50,10 +50,10 @@ def get_redis_connection():
     return Redis(host=REDIS_HOST, port=REDIS_PORT, db=0, decode_responses=True)
 
 # Shorten URL endpoint
-@app.post("/v1/shorten", response_model=ShortenResponse)
+@app.post("/api/shorten/", response_model=ShortenResponse)
 def shorten_url(shorten_request: ShortenRequest):
-    logger.info(f"Shortening URL: {shorten_request.url}")
-    url = str(shorten_request.url)
+    url = str(shorten_request.url) 
+    logger.info(f"Shortening URL: {url}")
     url_hash = zlib.crc32(url.encode())
 
     with get_db_connection() as conn:

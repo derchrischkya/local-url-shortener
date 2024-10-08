@@ -23,7 +23,7 @@ all deployed using Docker
 ### POST /v1/shorten
 
 ```bash
-curl -X POST "http://localhost:19000/v1/shorten" -H "Content-Type: application/json" -d '{"url": "https://www.google.com"}'
+curl -X POST "http://localhost:19000/api/shorten" -H "Content-Type: application/json" -d '{"url": "https://www.google.com"}'
 ```
 
 Response:
